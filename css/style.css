@@ -83,9 +83,11 @@ img {
 }
 
 .brand-logo {
-    width: 54px;
-    height: 48px;
-    object-fit: contain
+    width: 134px;
+    height: 68px;
+    object-fit: cover;
+    margin-left: 20px;
+    
 }
 
 .brand strong {
@@ -774,4 +776,118 @@ img {
     color: #a33;
     background: #fff1ed;
     border-radius: 12px
+}
+
+/* ==========================================
+   PWA - INSTALACIÓN
+========================================== */
+
+.hero-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+/* BOTÓN INSTALAR */
+
+#install-app {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 45px;
+
+    padding: 12px 18px;
+
+    border-radius: 13px;
+
+    border: 1px solid var(--orange);
+
+    background: white;
+
+    color: var(--orange);
+
+    font-weight: 800;
+
+    font-size: 13px;
+
+    transition: .2s ease;
+
+}
+
+
+#install-app svg {
+
+    width: 18px;
+
+    height: 18px;
+
+}
+
+
+#install-app:hover {
+
+    background: var(--orange);
+
+    color: white;
+
+}
+
+
+#install-app[hidden] {
+
+    display: none;
+
+}
+
+
+/* INSTRUCCIONES */
+
+.hero-copy > .install-info {
+
+    width: 100%;
+
+    max-width: 470px;
+
+    margin: 12px 0 0;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    color: var(--ink);
+
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+
+    .hero-actions {
+
+        width: 100%;
+
+        gap: 10px;
+
+    }
+
+    #install-app {
+
+        font-size: 12px;
+
+    }
+
 }
