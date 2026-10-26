@@ -1,0 +1,1 @@
+export async function loadCategories(){ const response=await fetch("./data/categories.json"); if(!response.ok) throw new Error("No se pudo cargar categories.json"); const data=await response.json(); if(!Array.isArray(data)) throw new Error("Las categorías no tienen un formato válido"); return data; }

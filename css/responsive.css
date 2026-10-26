@@ -1,0 +1,749 @@
+/* ==========================================
+   LA SALSAMENTARIA
+   DISEÑO RESPONSIVE
+========================================== */
+
+
+/* ==========================================
+   PANTALLAS GRANDES
+   1500px EN ADELANTE
+========================================== */
+
+@media (min-width: 1500px) {
+
+    .hero {
+        border-radius: 0 0 20px 20px;
+    }
+
+    .catalog {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+
+/* ==========================================
+   TABLETS Y PANTALLAS MEDIANAS
+   HASTA 1100px
+========================================== */
+
+@media (max-width: 1100px) {
+
+    /* HEADER */
+
+    .site-header {
+        gap: 16px;
+        padding: 0 20px;
+    }
+
+    .brand {
+        min-width: 220px;
+    }
+
+    .brand strong {
+        font-size: 19px;
+    }
+
+    .header-location b {
+        max-width: 150px;
+    }
+
+    .store-status {
+        padding: 0 12px;
+    }
+
+
+    /* HERO */
+
+    .hero-copy {
+        padding: 28px;
+    }
+
+    .trust-row {
+        gap: 12px;
+    }
+
+
+    /* ======================================
+       PRODUCTOS DESTACADOS
+       CARRUSEL TABLET
+    ====================================== */
+
+    #featured-grid > .product-card {
+        flex: 0 0 calc((100% - 14px) / 2);
+    }
+
+
+    /* ======================================
+       CATÁLOGO PRINCIPAL
+    ====================================== */
+
+    .product-grid {
+        grid-template-columns: repeat(
+            3,
+            minmax(0, 1fr)
+        );
+    }
+
+
+    /* IMÁGENES */
+
+    .product-photo {
+        height: 140px;
+    }
+
+}
+
+
+/* ==========================================
+   DISPOSITIVOS MÓVILES
+   HASTA 760px
+========================================== */
+
+@media (max-width: 760px) {
+
+    /* ======================================
+       CONFIGURACIÓN GENERAL
+    ====================================== */
+
+    html {
+        scroll-padding-top: 75px;
+    }
+
+
+    /* ======================================
+       AVISO DE DEMOSTRACIÓN
+    ====================================== */
+
+    .demo-note {
+        font-size: 9px;
+        padding: 5px;
+    }
+
+
+    /* ======================================
+       HEADER MÓVIL
+    ====================================== */
+
+    .site-header {
+        height: 66px;
+        padding: 0 14px;
+        gap: 10px;
+    }
+
+    .brand {
+        min-width: 0;
+        flex: 1;
+        gap: 5px;
+    }
+
+    .brand-logo {
+        width: 42px;
+        height: 40px;
+    }
+
+    .brand strong {
+        font-size: 17px;
+        letter-spacing: -.5px;
+    }
+
+    .brand small {
+        font-size: 9px;
+    }
+
+
+    /* OCULTAR INFORMACIÓN SECUNDARIA */
+
+    .header-location,
+    .store-status,
+    .header-whatsapp {
+        display: none;
+    }
+
+
+    /* BOTONES DEL HEADER */
+
+    .icon-button {
+        width: 39px;
+        height: 39px;
+    }
+
+
+    /* ======================================
+       HERO MÓVIL
+    ====================================== */
+
+    .hero {
+        grid-template-columns: 1fr;
+        border-radius: 0 0 16px 16px;
+    }
+
+    .hero-copy {
+        padding: 25px 20px 19px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        margin: 10px 0;
+    }
+
+    .hero-copy > p {
+        font-size: 13px;
+        max-width: 440px;
+    }
+
+
+    /* IMAGEN HERO */
+
+    .hero-image {
+        min-height: 190px;
+        max-height: 220px;
+        order: 2;
+    }
+
+    .hero-stamp {
+        width: 72px;
+        height: 72px;
+        font-size: 11px;
+        right: 15px;
+        top: 12px;
+    }
+
+
+    /* BENEFICIOS */
+
+    .trust-row {
+        margin-top: 17px;
+        gap: 12px;
+    }
+
+    .trust-row span {
+        font-size: 9px;
+    }
+
+
+    /* ======================================
+       CONTENEDOR DEL CATÁLOGO
+    ====================================== */
+
+    .catalog {
+        padding: 18px 14px 90px;
+    }
+
+
+    /* ======================================
+       ENCABEZADOS DE SECCIONES
+    ====================================== */
+
+    .section-heading {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .section-heading h2 {
+        font-size: 21px;
+    }
+
+
+    /* ======================================
+       PRODUCTOS DESTACADOS
+       SWIPER HORIZONTAL MÓVIL
+    ====================================== */
+
+    #featured-grid {
+        gap: 12px;
+
+        padding-top: 5px;
+        padding-bottom: 15px;
+
+        margin-bottom: 25px;
+
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    /* MOSTRAR UN PRODUCTO
+       Y PARTE DEL SIGUIENTE */
+
+    #featured-grid > .product-card {
+        flex: 0 0 82%;
+        min-width: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+    /* CONTROLES DEL SWIPER */
+
+    .featured-controls {
+        display: flex;
+        align-items: center;
+
+        gap: 7px;
+        margin-left: auto;
+    }
+
+
+    /* FLECHAS */
+
+    .featured-arrow {
+        width: 34px;
+        height: 34px;
+
+        flex-shrink: 0;
+    }
+
+    .featured-arrow svg {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    /* BOTÓN VER TODOS */
+
+    .featured-controls .text-button {
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+
+    /* ======================================
+       BUSCADOR
+    ====================================== */
+
+    .search-wrap {
+        height: 46px;
+    }
+
+
+    /* ======================================
+       CATEGORÍAS
+       DESPLAZAMIENTO HORIZONTAL
+    ====================================== */
+
+    .category-list {
+        margin-right: -14px;
+
+        padding: 12px 14px 18px 0;
+
+        gap: 8px;
+
+        overflow-x: auto;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    /* BOTONES DE CATEGORÍA */
+
+    .category-chip {
+        min-height: 42px;
+
+        padding: 8px 10px;
+
+        font-size: 10px;
+    }
+
+
+    /* ======================================
+       CATÁLOGO PRINCIPAL
+       DOS COLUMNAS
+    ====================================== */
+
+    .product-grid {
+        grid-template-columns: repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+        gap: 10px;
+    }
+
+
+    /* ======================================
+       TARJETAS DE PRODUCTOS
+    ====================================== */
+
+    .product-photo {
+        height: clamp(
+            110px,
+            32vw,
+            175px
+        );
+
+        padding: 6px;
+    }
+
+
+    /* INFORMACIÓN */
+
+    .product-info {
+        padding: 9px;
+    }
+
+    .product-info h3 {
+        font-size: 12px;
+    }
+
+    .product-description {
+        font-size: 10px;
+        min-height: 42px;
+    }
+
+
+    /* PRECIO */
+
+    .product-price {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+
+    /* ACCIONES */
+
+    .product-actions {
+        gap: 6px;
+    }
+
+
+    /* CONTROL DE CANTIDAD */
+
+    .quantity-control {
+        height: 29px;
+    }
+
+    .quantity-control button {
+        width: 25px;
+        height: 27px;
+    }
+
+    .quantity-control output {
+        min-width: 19px;
+    }
+
+
+    /* BOTÓN AGREGAR */
+
+    .add-button {
+        font-size: 10px;
+        min-width: 100%;
+        padding: 9px 5px;
+    }
+
+
+    /* BOTÓN AGREGAR EN DESTACADOS */
+
+    #featured-grid .add-button {
+        min-width: 90px;
+    }
+
+
+    /* ======================================
+       ENCABEZADO DEL CATÁLOGO
+    ====================================== */
+
+    .catalog-heading {
+        margin-top: 27px;
+    }
+
+
+    /* ======================================
+       FOOTER
+    ====================================== */
+
+    .site-footer {
+        padding: 18px 15px 85px;
+        gap: 9px;
+    }
+
+    .site-footer img {
+        width: 38px;
+    }
+
+    .site-footer strong {
+        font-size: 13px;
+    }
+
+    .site-footer > span {
+        display: none;
+    }
+
+
+    /* ======================================
+       NAVEGACIÓN INFERIOR MÓVIL
+    ====================================== */
+
+    .mobile-nav {
+        display: flex;
+
+        position: fixed;
+
+        z-index: 25;
+
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        height: 62px;
+
+        padding: 5px 8px max(
+            5px,
+            env(safe-area-inset-bottom)
+        );
+
+        background: #fff;
+
+        border-top: 1px solid var(--border);
+
+        justify-content: space-around;
+
+        box-shadow: 0 -4px 18px #00000008;
+    }
+
+
+    /* ENLACES Y BOTONES */
+
+    .mobile-nav a,
+    .mobile-nav button {
+        flex: 1;
+
+        position: relative;
+
+        border: 0;
+
+        background: transparent;
+
+        color: #7b8490;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 3px;
+
+        font-size: 9px;
+    }
+
+
+    /* ICONOS */
+
+    .mobile-nav svg {
+        width: 19px;
+        height: 19px;
+    }
+
+
+    /* ELEMENTO ACTIVO */
+
+    .mobile-nav .active {
+        color: var(--orange);
+    }
+
+
+    /* CONTADOR DEL CARRITO */
+
+    .mobile-nav b {
+        position: absolute;
+
+        top: 2px;
+        left: calc(50% + 7px);
+
+        background: var(--orange);
+        color: white;
+
+        border-radius: 20px;
+
+        padding: 1px 4px;
+
+        font-size: 9px;
+    }
+
+
+    /* ======================================
+       CARRITO MÓVIL
+    ====================================== */
+
+    .cart-panel {
+        padding: 18px 15px 14px;
+    }
+
+
+    /* ENCABEZADO */
+
+    .cart-header h2 {
+        font-size: 22px;
+    }
+
+
+    /* PRODUCTOS DEL CARRITO */
+
+    .cart-item {
+        grid-template-columns:
+            62px
+            minmax(0, 1fr)
+            auto;
+
+        gap: 9px;
+
+        padding: 12px 0;
+    }
+
+
+    /* IMÁGENES */
+
+    .cart-item > img {
+        width: 62px;
+        height: 62px;
+    }
+
+
+    /* INFORMACIÓN LATERAL */
+
+    .cart-item-side {
+        height: 62px;
+    }
+
+
+    /* RESUMEN */
+
+    .cart-summary {
+        padding-top: 9px;
+    }
+
+
+    /* FINALIZAR PEDIDO */
+
+    .checkout-button {
+        font-size: 12px;
+    }
+
+
+    /* ======================================
+       NOTIFICACIONES
+    ====================================== */
+
+    .toast {
+        bottom: 75px;
+    }
+
+}
+
+
+/* ==========================================
+   CELULARES PEQUEÑOS
+   HASTA 360px
+========================================== */
+
+@media (max-width: 360px) {
+
+    /* HEADER */
+
+    .brand strong {
+        font-size: 15px;
+    }
+
+    .brand-logo {
+        width: 36px;
+    }
+
+
+    /* HERO */
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .trust-row span {
+        font-size: 8px;
+    }
+
+
+    /* ======================================
+       PRODUCTOS DESTACADOS
+    ====================================== */
+
+    #featured-grid {
+        gap: 8px;
+    }
+
+    #featured-grid > .product-card {
+        flex-basis: 86%;
+    }
+
+
+    /* FLECHAS */
+
+    .featured-arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+    .featured-controls {
+        gap: 5px;
+    }
+
+
+    /* ======================================
+       CATÁLOGO PRINCIPAL
+    ====================================== */
+
+    .product-grid {
+        gap: 8px;
+    }
+
+
+    /* TARJETAS */
+
+    .product-info {
+        padding: 8px;
+    }
+
+
+    /* CANTIDADES */
+
+    .product-actions .quantity-control {
+        margin: auto;
+    }
+
+
+    /* BOTÓN AGREGAR */
+
+    .add-button {
+        width: 100%;
+    }
+
+
+    /* DESTACADOS */
+
+    #featured-grid .add-button {
+        width: auto;
+    }
+
+}
+
+
+/* ==========================================
+   ACCESIBILIDAD
+   REDUCIR ANIMACIONES
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition: none !important;
+
+        animation: none !important;
+    }
+
+}

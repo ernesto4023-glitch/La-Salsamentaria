@@ -1,0 +1,4 @@
+import { CONFIG } from "./config.js";
+export function getCart(){ try { const raw=localStorage.getItem(CONFIG.cartStorageKey); if(!raw) return []; const data=JSON.parse(raw); if(!Array.isArray(data)) return []; return data.filter(x=>x && typeof x.id==="string" && Number.isInteger(x.quantity) && x.quantity>0).map(x=>({id:x.id,quantity:x.quantity})); } catch(error){ console.warn("No se pudo leer el carrito guardado.",error); return []; } }
+export function saveCart(cart){ try { localStorage.setItem(CONFIG.cartStorageKey,JSON.stringify(cart.map(({id,quantity})=>({id,quantity})))); return true; } catch(error){ console.warn("No se pudo guardar el carrito.",error); return false; } }
+export function clearCart(){ try { localStorage.removeItem(CONFIG.cartStorageKey); return true; } catch(error){ console.warn("No se pudo limpiar el carrito.",error); return false; } }

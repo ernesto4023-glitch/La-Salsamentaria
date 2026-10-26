@@ -1,0 +1,1 @@
+export async function loadProducts(){ const response=await fetch("./data/products.json"); if(!response.ok) throw new Error("No se pudo cargar products.json"); const data=await response.json(); if(!Array.isArray(data)) throw new Error("El catálogo no tiene un formato válido"); return data; }

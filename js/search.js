@@ -1,0 +1,2 @@
+export function normalizeText(value=""){ return String(value).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim(); }
+export function filterProducts(products,category,query){ const q=normalizeText(query); return products.filter(p=>p.available && (category==="todos" || (category==="promociones" ? p.badge==="Oferta" : p.category===category)) && (!q || normalizeText(`${p.name} ${p.description} ${p.category}`).includes(q))); }

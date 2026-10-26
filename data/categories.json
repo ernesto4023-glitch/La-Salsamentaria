@@ -1,0 +1,52 @@
+[
+  {
+    "id": "todos",
+    "name": "Todos",
+    "icon": "grid-2x2"
+  },
+  {
+    "id": "jamones-embutidos",
+    "name": "Jamones y embutidos",
+    "icon": "beef"
+  },
+  {
+    "id": "salchichas-chorizos",
+    "name": "Salchichas y chorizos",
+    "icon": "sausage"
+  },
+  {
+    "id": "quesos",
+    "name": "Quesos",
+    "icon": "milk"
+  },
+  {
+    "id": "carnes-frias",
+    "name": "Carnes frías",
+    "icon": "beef"
+  },
+  {
+    "id": "tocinetas",
+    "name": "Tocinetas",
+    "icon": "cooking-pot"
+  },
+  {
+    "id": "productos-lacteos",
+    "name": "Productos lácteos",
+    "icon": "milk"
+  },
+  {
+    "id": "enlatados-conservas",
+    "name": "Enlatados y conservas",
+    "icon": "package"
+  },
+  {
+    "id": "salsas-aderezos",
+    "name": "Salsas y aderezos",
+    "icon": "droplet"
+  },
+  {
+    "id": "promociones",
+    "name": "Promociones",
+    "icon": "tags"
+  }
+]

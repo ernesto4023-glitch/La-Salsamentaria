@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="theme-color" content="#ffb52e">
+
+  <meta name="description" content="Menú digital de La Salsamentaria: embutidos, quesos, carnes frías y más.">
+
+  <title>La Salsamentaria | Menú digital</title>
+
+
+  <!-- GOOGLE FONTS -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Nunito:wght@700;800;900&display=swap"
+    rel="stylesheet">
+
+
+  <!-- ESTILOS -->
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+
+
+  <!-- ICONOS -->
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+
+  <!-- JAVASCRIPT PRINCIPAL -->
+
+  <script type="module" src="./js/app.js"></script>
+
+</head>
+
+
+<body>
+
+
+  <!-- ========================================
+       AVISO DE DEMOSTRACIÓN
+  ======================================== -->
+
+  <div class="demo-note">
+    MENÚ DE DEMOSTRACIÓN · Precios ilustrativos
+  </div>
+
+
+
+  <!-- ========================================
+       HEADER
+  ======================================== -->
+
+  <header class="site-header">
+
+
+    <!-- LOGOTIPO -->
+
+    <a class="brand" href="#inicio" aria-label="La Salsamentaria, inicio">
+
+      <img src="./assets/img/logo.svg" alt="" class="brand-logo">
+
+      <span>
+
+        <strong>La Salsamentaria</strong>
+
+        <small>
+          Calidad y sabor en cada bocado
+        </small>
+
+      </span>
+
+    </a>
+
+
+
+    <!-- UBICACIÓN -->
+
+    <div class="header-location">
+
+      <i data-lucide="map-pin"></i>
+
+      <span>
+
+        <b id="store-address">
+          Dirección por configurar
+        </b>
+
+        <small>Colombia</small>
+
+      </span>
+
+    </div>
+
+
+
+    <!-- ESTADO DEL ESTABLECIMIENTO -->
+
+    <div class="store-status">
+
+      <span class="status-dot"></span>
+
+      <span>
+
+        <b>Abierto</b>
+
+        <small>
+          Horario de demostración
+        </small>
+
+      </span>
+
+    </div>
+
+
+
+    <!-- CONTACTO WHATSAPP -->
+
+    <button type="button" class="header-whatsapp" id="contact-whatsapp">
+
+      <i data-lucide="message-circle"></i>
+
+      <span>
+
+        <b>Contáctanos</b>
+
+        <small>WhatsApp</small>
+
+      </span>
+
+    </button>
+
+
+
+    <!-- CARRITO -->
+
+    <button type="button" class="icon-button cart-trigger" id="open-cart" aria-label="Abrir carrito">
+
+      <i data-lucide="shopping-cart"></i>
+
+      <span class="cart-count" id="cart-count">
+        0
+      </span>
+
+    </button>
+
+
+  </header>
+
+
+
+  <!-- ========================================
+       CONTENIDO PRINCIPAL
+  ======================================== -->
+
+  <main id="inicio">
+
+
+
+    <!-- ========================================
+         HERO
+    ======================================== -->
+
+    <section class="hero section-shell">
+
+
+      <!-- INFORMACIÓN PRINCIPAL -->
+
+      <div class="hero-copy">
+
+        <span class="eyebrow">
+
+          <i data-lucide="sparkles"></i>
+
+          Sabor para cada momento
+
+        </span>
+
+
+        <h1>
+
+          Todo lo que necesitas,
+
+          <br>
+
+          <em>en un solo lugar</em>
+
+        </h1>
+
+
+        <p>
+          Embutidos, quesos, carnes frías,
+          lácteos y mucho más, con la mejor
+          calidad y frescura.
+        </p>
+
+
+
+        <!-- BOTÓN EXPLORAR -->
+
+        <a class="primary-button" href="#category-list">
+
+          <i data-lucide="utensils"></i>
+
+          Explorar menú
+
+          <i data-lucide="arrow-right"></i>
+
+        </a>
+
+
+
+        <!-- BENEFICIOS -->
+
+        <div class="trust-row">
+
+
+          <span>
+
+            <i data-lucide="leaf"></i>
+
+            Productos frescos
+
+          </span>
+
+
+          <span>
+
+            <i data-lucide="shield-check"></i>
+
+            Calidad y confianza
+
+          </span>
+
+
+          <span>
+
+            <i data-lucide="tag"></i>
+
+            Precios claros
+
+          </span>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- IMAGEN PRINCIPAL -->
+
+      <div class="hero-image">
+
+        <img src="./assets/img/hero-salsamentaria.jpg" alt="Selección de embutidos y quesos frescos">
+
+        <span class="hero-stamp">
+
+          ¡Sabor y calidad
+
+          <br>
+
+          siempre!
+
+        </span>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         SECCIÓN GENERAL DEL CATÁLOGO
+    ======================================== -->
+
+    <section class="catalog section-shell" id="catalogo">
+
+
+
+      <!-- ========================================
+           PRODUCTOS DESTACADOS
+      ======================================== -->
+
+      <div class="section-heading">
+
+
+        <!-- TÍTULO -->
+
+        <div>
+
+          <span class="eyebrow orange">
+
+            <i data-lucide="flame"></i>
+
+            Recomendados para ti
+
+          </span>
+
+
+          <h2>
+            Productos destacados
+          </h2>
+
+        </div>
+
+
+
+        <!-- CONTROLES DEL SWIPER -->
+
+        <div class="featured-controls">
+
+
+          <!-- ANTERIOR -->
+
+          <button type="button" class="featured-arrow" id="featured-prev" aria-label="Producto destacado anterior">
+
+            <i data-lucide="chevron-left"></i>
+
+          </button>
+
+
+
+          <!-- SIGUIENTE -->
+
+          <button type="button" class="featured-arrow" id="featured-next" aria-label="Siguiente producto destacado">
+
+            <i data-lucide="chevron-right"></i>
+
+          </button>
+
+
+
+          <!-- VER TODOS -->
+
+          <button type="button" class="text-button" id="show-all">
+
+            Ver todos
+
+            <i data-lucide="arrow-right"></i>
+
+          </button>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ========================================
+           SWIPER HORIZONTAL
+      ======================================== -->
+
+      <div class="featured-grid" id="featured-grid" tabindex="0" role="region" aria-roledescription="carrusel"
+        aria-label="Productos destacados">
+
+        <!--
+          Los productos destacados se generan
+          dinámicamente desde JavaScript.
+        -->
+
+      </div>
+
+
+
+      <!-- ========================================
+           BUSCADOR DE PRODUCTOS
+      ======================================== -->
+
+      <div class="search-wrap">
+
+
+        <!-- ICONO BUSCAR -->
+
+        <i data-lucide="search"></i>
+
+
+
+        <!-- INPUT -->
+
+        <input id="search-input" type="search" placeholder="¿Qué estás buscando?" aria-label="Buscar productos">
+
+
+
+        <!-- LIMPIAR BÚSQUEDA -->
+
+        <button type="button" id="clear-search" class="clear-search" aria-label="Limpiar búsqueda" hidden>
+
+          <i data-lucide="x"></i>
+
+        </button>
+
+
+      </div>
+
+
+
+      <!-- ========================================
+           CATEGORÍAS
+      ======================================== -->
+
+      <div class="category-list" id="category-list" aria-label="Categorías del menú">
+
+        <!--
+          Las categorías se generan
+          dinámicamente desde JavaScript.
+        -->
+
+      </div>
+
+
+
+      <!-- ========================================
+           ENCABEZADO DEL CATÁLOGO
+      ======================================== -->
+
+      <div class="section-heading catalog-heading">
+
+
+        <div>
+
+
+          <span class="eyebrow orange">
+
+            Encuentra tus favoritos
+
+          </span>
+
+
+
+          <!-- TÍTULO DINÁMICO -->
+
+          <h2 id="catalog-title">
+
+            Todos los productos
+
+          </h2>
+
+
+
+          <!-- CONTADOR DE RESULTADOS -->
+
+          <p id="result-count">
+
+            Cargando productos…
+
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- ========================================
+           CUADRÍCULA DE PRODUCTOS
+      ======================================== -->
+
+      <div class="product-grid" id="product-grid" aria-live="polite">
+
+        <!--
+          Los productos se cargan
+          dinámicamente desde JavaScript.
+        -->
+
+      </div>
+
+
+
+      <!-- ========================================
+           SIN RESULTADOS
+      ======================================== -->
+
+      <div class="empty-state" id="empty-results" hidden>
+
+
+        <span class="empty-icon">
+
+          <i data-lucide="search-x"></i>
+
+        </span>
+
+
+
+        <h3>
+          No encontramos resultados
+        </h3>
+
+
+
+        <p>
+          Prueba con otra palabra o cambia
+          la categoría seleccionada.
+        </p>
+
+
+
+        <button type="button" class="secondary-button" id="reset-filters">
+
+          Limpiar filtros
+
+        </button>
+
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- ========================================
+       FOOTER
+  ======================================== -->
+
+  <footer class="site-footer">
+
+
+    <!-- LOGOTIPO -->
+
+    <img src="./assets/img/logo.svg" alt="">
+
+
+
+    <!-- INFORMACIÓN -->
+
+    <div>
+
+      <strong>
+        La Salsamentaria
+      </strong>
+
+      <p>
+        Hecho para compartir buenos momentos.
+      </p>
+
+    </div>
+
+
+
+    <!-- AVISO -->
+
+    <span>
+      Prototipo demostrativo · Sin pagos en línea
+    </span>
+
+
+  </footer>
+
+
+
+  <!-- ========================================
+       NAVEGACIÓN MÓVIL
+  ======================================== -->
+
+  <nav class="mobile-nav" aria-label="Navegación principal">
+
+
+
+    <!-- INICIO -->
+
+    <a href="#inicio" class="active">
+
+      <i data-lucide="house"></i>
+
+      <span>Inicio</span>
+
+    </a>
+
+
+
+    <!-- CATEGORÍAS -->
+
+    <a href="#category-list">
+
+      <i data-lucide="layout-grid"></i>
+
+      <span>Categorías</span>
+
+    </a>
+
+
+
+    <!-- CARRITO -->
+
+    <button type="button" id="mobile-cart">
+
+      <i data-lucide="shopping-bag"></i>
+
+      <span>Carrito</span>
+
+      <b id="mobile-cart-count">
+        0
+      </b>
+
+    </button>
+
+
+
+    <!-- CONTACTO -->
+
+    <button type="button" id="mobile-contact">
+
+      <i data-lucide="message-circle"></i>
+
+      <span>Contacto</span>
+
+    </button>
+
+
+  </nav>
+
+
+
+  <!-- ========================================
+       OVERLAY DEL CARRITO
+  ======================================== -->
+
+  <div class="overlay" id="cart-overlay" hidden></div>
+
+
+
+  <!-- ========================================
+       PANEL LATERAL DEL CARRITO
+  ======================================== -->
+
+  <aside class="cart-panel" id="cart-panel" aria-label="Tu carrito" aria-modal="true" role="dialog" aria-hidden="true">
+
+
+
+    <!-- ========================================
+         ENCABEZADO DEL CARRITO
+    ======================================== -->
+
+    <div class="cart-header">
+
+
+      <div>
+
+        <h2>
+
+          Tu carrito
+
+          <span id="cart-line-count">
+            (0)
+          </span>
+
+        </h2>
+
+
+        <p>
+          Revisa tu pedido antes de continuar
+        </p>
+
+      </div>
+
+
+
+      <!-- CERRAR CARRITO -->
+
+      <button type="button" class="icon-button" id="close-cart" aria-label="Cerrar carrito">
+
+        <i data-lucide="x"></i>
+
+      </button>
+
+
+    </div>
+
+
+
+    <!-- ========================================
+         PRODUCTOS DEL CARRITO
+    ======================================== -->
+
+    <div class="cart-items" id="cart-items">
+
+      <!--
+        Los productos agregados se generan
+        dinámicamente desde JavaScript.
+      -->
+
+    </div>
+
+
+
+    <!-- ========================================
+         CARRITO VACÍO
+    ======================================== -->
+
+    <div class="cart-empty" id="cart-empty">
+
+
+      <span class="empty-icon">
+
+        <i data-lucide="shopping-basket"></i>
+
+      </span>
+
+
+
+      <h3>
+        Tu carrito está vacío
+      </h3>
+
+
+
+      <p>
+        Agrega algunos productos y
+        continúa tu pedido.
+      </p>
+
+
+
+      <button type="button" class="primary-button" id="browse-products">
+
+        Explorar menú
+
+      </button>
+
+
+    </div>
+
+
+
+    <!-- ========================================
+         RESUMEN DEL CARRITO
+    ======================================== -->
+
+    <div class="cart-summary" id="cart-summary">
+
+
+
+      <!-- SUBTOTAL -->
+
+      <div>
+
+        <span>Subtotal</span>
+
+        <strong id="cart-subtotal">
+
+          $ 0
+
+        </strong>
+
+      </div>
+
+
+
+      <!-- ENVÍO -->
+
+      <div>
+
+        <span>Envío</span>
+
+        <strong id="cart-shipping">
+
+          Por confirmar
+
+        </strong>
+
+      </div>
+
+
+
+      <!-- TOTAL -->
+
+      <div class="total-row">
+
+        <span>
+          Total estimado
+        </span>
+
+        <strong id="cart-total">
+
+          $ 0
+
+        </strong>
+
+      </div>
+
+
+
+      <!-- NOTA DE ENVÍO -->
+
+      <p class="shipping-note">
+
+        El valor final y la disponibilidad
+        se confirman por WhatsApp.
+
+      </p>
+
+
+
+      <!-- FINALIZAR PEDIDO -->
+
+      <button type="button" class="primary-button checkout-button" id="checkout">
+
+        <i data-lucide="message-circle"></i>
+
+        Finalizar pedido por WhatsApp
+
+      </button>
+
+
+
+      <!-- VACIAR CARRITO -->
+
+      <button type="button" class="clear-cart" id="clear-cart">
+
+        <i data-lucide="trash-2"></i>
+
+        Vaciar carrito
+
+      </button>
+
+
+    </div>
+
+
+  </aside>
+
+
+
+  <!-- ========================================
+       NOTIFICACIONES
+  ======================================== -->
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+
+</body>
+
+</html>
